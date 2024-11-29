@@ -10,7 +10,6 @@ require_once(ROOT_DIR."includes\header.php");
 session_start();
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    // Destroy session and log out user
     $_SESSION = [];
     session_destroy();
 }
@@ -21,7 +20,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="card-body">
             <h5 class="card-title">You have been logged out</h5>
             <p class="card-text">Thank you for visiting. You are now logged out.</p>
-            <a href="/login.php" class="btn btn-primary">Go to Login</a>
+            <a href="/login.php" class="btn btn-darks">Go to Login</a>
         </div>
     </div>
 </div>

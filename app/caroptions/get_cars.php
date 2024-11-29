@@ -3,12 +3,12 @@
    $db = new DatabaseConnect();
    $conn = $db ->connectDB();
 
-   $productList = [];
+   $carList = [];
    try {
        $sql = "SELECT * FROM `cars`";
        $stmt = $conn ->prepare($sql);
        $stmt -> execute();
-       $productList = $stmt -> fetchAll();
+       $carList = $stmt -> fetchAll();
        
 
    } catch (PDOException $e){

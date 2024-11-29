@@ -6,12 +6,11 @@ require_once(ROOT_DIR."includes/header.php");
 <!-- Navbar -->
 <?php require_once("includes\\navbar.php"); ?>
 
-<!-- Login Form -->
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card">
-                <div class="card-header bg-primary text-white text-center">
+                <div class="card-header bg-dark text-white text-center">
                     <h4>Login to Your Account</h4>
                 </div>
                 <div class="card-body">
@@ -25,7 +24,7 @@ require_once(ROOT_DIR."includes/header.php");
                             <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
                         </div>
                         <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary">Login</button>
+                            <button type="submit" class="btn btn-dark">Login</button>
                         </div>
                     </form>
                 </div>

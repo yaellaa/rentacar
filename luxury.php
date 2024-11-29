@@ -30,9 +30,9 @@
     <!-- Page Header -->
     <div class="container mt-5">
         <div class="d-flex justify-content-between align-items-center">
-            <h2>Car List</h2>
+            <h2>Product List</h2>
             <!-- Add New Product Button -->
-            <a href="<?php echo BASE_URL; ?>views/admin/cars/add.php" class="btn btn-success">Add New Car</a>
+            <a href="<?php echo BASE_URL; ?>views/admin/products/add.php" class="btn btn-success">Add New Product</a>
         </div>
 
         <?php if(isset($messageSucc)){ ?>

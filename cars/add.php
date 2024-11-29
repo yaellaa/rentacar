@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Rental - HANQI</title>
+    <title>Product Details - MyShop</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -11,7 +11,7 @@
     <!-- Navbar with Dropdown for User Account (Admin) -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="homepage.html">HANQI</a>
+            <a class="navbar-brand" href="homepage.html">MyShop</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -40,72 +40,71 @@
         </div>
     </nav>
 
-    <!-- Car Maintenance Form -->
+    <!-- Product Maintenance Form -->
     <div class="container my-5">
-        <h2>Car Maintenance</h2>
+        <h2>Product Maintenance</h2>
         <form>
             <div class="row">
-                <!-- Left Column: Car Image -->
+                <!-- Left Column: Product Image -->
                 <div class="col-md-4 mb-3">
-                    <label for="carImage" class="form-label">Car Image</label>
-                    <input type="file" class="form-control" id="carImage" accept="image/*">
+                    <label for="productImage" class="form-label">Product Image</label>
+                    <input type="file" class="form-control" id="productImage" accept="image/*">
                 </div>
 
-                <!-- Right Column: Car Details -->
+                <!-- Right Column: Product Details -->
                 <div class="col-md-8">
                     <div class="row">
-                        <!-- Car Model Name -->
+                        <!-- Product Name -->
                         <div class="col-md-12 mb-3">
-                            <label for="carModelName" class="form-label">Car Model</label>
-                            <input type="text" class="form-control" id="carModelName" placeholder="Enter car model name">
+                            <label for="productName" class="form-label">Product Name</label>
+                            <input type="text" class="form-control" id="productName" placeholder="Enter product name">
                         </div>
 
-                        <!-- Car Category -->
+                        <!-- Product Category -->
                         <div class="col-md-12 mb-3">
-                            <label for="carCategory" class="form-label">Category</label>
-                            <select id="carCategory" class="form-select">
+                            <label for="category" class="form-label">Category</label>
+                            <select id="category" class="form-select">
                                 <option selected>Choose a category</option>
-                                <option value="1">SUV</option>
-                                <option value="2">Sedan</option>
-                                <option value="3">Sports Car</option>
-                                <option value="4">Luxury</option>
+                                <option value="1">Electronics</option>
+                                <option value="2">Fashion</option>
+                                <option value="3">Home Appliances</option>
                                 <!-- Add more categories as needed -->
                             </select>
                         </div>
                     </div>
 
                     <div class="row">
-                        <!-- Number of Cars Available -->
+                        <!-- Number of Stocks -->
                         <div class="col-md-4 mb-3">
-                            <label for="numberOfCars" class="form-label">Number of Cars Available</label>
-                            <input type="number" class="form-control" id="numberOfCars" placeholder="Enter number of cars available" oninput="calculateTotalPrice()">
+                            <label for="numberOfStocks" class="form-label">Number of Stocks</label>
+                            <input type="number" class="form-control" id="numberOfStocks" placeholder="Enter number of stocks" oninput="calculateTotalPrice()">
                         </div>
 
-                        <!-- Rental Price per Day -->
+                        <!-- Unit Price -->
                         <div class="col-md-4 mb-3">
-                            <label for="rentalPrice" class="form-label">Rental Price per Day</label>
-                            <input type="number" step="0.01" class="form-control" id="rentalPrice" placeholder="Enter rental price per day" oninput="calculateTotalPrice()">
+                            <label for="unitPrice" class="form-label">Unit Price</label>
+                            <input type="number" step="0.01" class="form-control" id="unitPrice" placeholder="Enter unit price" oninput="calculateTotalPrice()">
                         </div>
 
-                        <!-- Total Rental Price (Automatically Calculated) -->
+                        <!-- Total Price (Automatically Calculated) -->
                         <div class="col-md-4 mb-3">
-                            <label for="totalRentalPrice" class="form-label">Total Rental Price</label>
-                            <input type="text" class="form-control" id="totalRentalPrice" placeholder="Total Rental Price" readonly>
+                            <label for="totalPrice" class="form-label">Total Price</label>
+                            <input type="text" class="form-control" id="totalPrice" placeholder="Total Price" readonly>
                         </div>
                     </div>
 
-                    <!-- Car Description -->
+                    <!-- Product Description -->
                     <div class="row">
                         <div class="col-md-12 mb-3">
-                            <label for="carDescription" class="form-label">Description</label>
-                            <textarea class="form-control" id="carDescription" rows="3" placeholder="Enter car description"></textarea>
+                            <label for="description" class="form-label">Description</label>
+                            <textarea class="form-control" id="description" rows="3" placeholder="Enter product description"></textarea>
                         </div>
                     </div>
 
                     <!-- Save Button (aligned to right) -->
                     <div class="row">
                         <div class="col-md-12 d-grid gap-2">
-                            <button type="submit" class="btn btn-primary">Save Car</button>
+                            <button type="submit" class="btn btn-primary">Save Product</button>
                         </div>
                     </div>
 

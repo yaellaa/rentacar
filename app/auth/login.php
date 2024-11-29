@@ -1,32 +1,49 @@
-<?php
-// Received user input
+<?php 
+//received user input
 $username = $_POST["username"];
 $password = $_POST["password"];
 
 session_start();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // Hardcoded admin username and password for simplicity
-    $admin_username = "admin"; // Admin username
-    $admin_password = "admin123"; // Admin password (hashed or plaintext)
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    
+        //connect to database
+        $host = "localhost";
+        $database = "cars";
+        $dbusername = "root";
+        $dbpassword = "";
 
-    // Check if the provided credentials match the admin credentials
-    if ($username === $admin_username && password_verify($password, password_hash($admin_password, PASSWORD_DEFAULT))) {
+        $dsn = "mysql: host=$host;dbname=$database;";
+        try {
+            $conn = new PDO($dsn, $dbusername, $dbpassword);
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+            
+            $stmt = $conn->prepare('SELECT * FROM `users` WHERE username = :p_username');
+            $stmt->bindParam(':p_username',$username);
+            $stmt->execute();
+            $users = $stmt->fetchAll();
+            if($users){
+                if(password_verify($password,$users[0]["password"])){
+                    $_SESSION = [];
+                    session_regenerate_id(true);
+                    $_SESSION["user_id"] = $users[0]["id"];
+                    $_SESSION["username"] = $users[0]["username"];
+                    $_SESSION["fullname"] = $users[0]["fullname"];
+                    $_SESSION["is_admin"] = $users[0]["is_admin"];
 
-        // Start session and store admin data in session variables
-        $_SESSION = [];
-        session_regenerate_id(true);
-        $_SESSION["is_admin"] = true;
-        $_SESSION["username"] = $username;  // Admin's username
+                    header("location: /index.php");
+                } else {
+                    echo "Only Admin can ";
+                }
+            } else {
+                echo "user not exist";
+            }
 
-        // Redirect to admin dashboard
-        header("Location: /index.php");
-        exit(); // Stop further script execution after redirection
+        } catch (Exception $e){
+            echo "Connection Failed: " . $e->getMessage();
+        }
 
-    } else {
-        // Incorrect login credentials
-        echo "Invalid credentials. Only admin can log in.";
-    }
 }
 ?>

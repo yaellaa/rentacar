@@ -7,7 +7,7 @@ require_once(ROOT_DIR."includes/header.php");
 <?php require_once(ROOT_DIR."includes/navbar.php"); ?>
 
 <?php
-require_once(ROOT_DIR."views/components/page-guard.php");
+require_once(ROOT_DIR."views/components/page-guaard.php");
 
 if(isset($_SESSION["error"])){
     $messageErr = $_SESSION["error"];
