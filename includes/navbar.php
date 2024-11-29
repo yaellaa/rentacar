@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
     <a href="index.php">
-    <img src="public/uploads/cars/car.png" alt="Car Rental Logo" style="width: 100px; height: auto; margin-right: 10px;">
+    <img src="public/uploads/cars/car.png" alt="Car Rental Logo" style="width: 74px; height: auto; margin-right: 10px;">
     </a>
 
         <a class="navbar-brand" href="index.php">Car Rental</a>
@@ -14,7 +14,7 @@
                     <a class="nav-link active" aria-current="page" href="<?php echo htmlspecialchars(BASE_URL); ?>index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="<?php echo htmlspecialchars(BASE_URL); ?>#">Cars</a>
+                    <a class="nav-link active" aria-current="page" href="<?php echo htmlspecialchars(BASE_URL); ?>catalog.php">Catalog</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo htmlspecialchars(BASE_URL); ?>rented.php">Rentals</a>
@@ -55,3 +55,6 @@
         </div>
     </div>
 </nav>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+

@@ -1,12 +1,9 @@
 <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 Car Rental. All rights reserved.</p>
+
+        <p>&copy; 2024 Marcial Motors. All rights reserved.</p>
         <nav>
             <a href="privacypolicy.php" class="text-white">Privacy Policy</a> | 
-            <a href="terms&condition.php" class="text-white">Terms & Conditions</a>
+            <a href="ToC.php" class="text-white">Terms & Conditions</a>
         </nav>
     </footer>
 
-    <!-- Bootstrap 5 JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>

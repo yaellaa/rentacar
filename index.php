@@ -7,10 +7,12 @@ require_once(ROOT_DIR."includes/header.php");
 <!-- Navbar -->
 <?php require_once(ROOT_DIR."includes/navbar.php"); ?>
 
+<link href="/styles/bootstrap.min.css" rel="stylesheet">
+
 <!-- Hero Section -->
 <div class="container-fluid bg-dark text-white text-center py-5">
-    <h1 class="display-4">Welcome to Marcial Motors!</h1>
-    <p class="lead">Rent the car of your dreams with ease</p>
+    <h1 class="display-2">Welcome to Marcial Motors!</h1>
+    <p class="lead">Rent the car of your dreams with ease!</p>
 </div>
 
 <!-- Slideshow (Carousel) -->
@@ -40,3 +42,4 @@ require_once(ROOT_DIR."includes/header.php");
 
 <!-- Footer -->
 <?php require_once(ROOT_DIR."includes/footer.php"); ?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

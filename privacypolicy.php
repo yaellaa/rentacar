@@ -1,52 +1,31 @@
+<?php 
+session_start();
+require_once($_SERVER["DOCUMENT_ROOT"]."/app/config/Directories.php");
+require_once(ROOT_DIR."includes/header.php"); 
+
+require_once(ROOT_DIR."includes/navbar.php");?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - [Your Car Rental Business Name]</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        h1, h2 {
-            color: #333;
-        }
-        h2 {
-            margin-top: 20px;
-        }
-        p {
-            color: #555;
-            font-size: 1.1em;
-        }
-        .contact-info {
-            margin-top: 30px;
-        }
-        .contact-info p {
-            font-size: 1.2em;
-        }
-        .section {
-            margin-bottom: 30px;
-        }
-        .section ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
-    </style>
+    <title>Privacy Policy - Marcial Motors</title>
     
 </head>
 <body>
+<div class="container-fluid bg-dark text-white text-center py-5">
+ <h1>Privacy Policy</h1>
+    <p><strong>Effective Date: November 30, 2024</p>       
+    <p><i>Marcial Motors (referred to as "we," "our," or "us"), 
+        we are committed to protecting your privacy and ensuring the security of your personal information. 
+        This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you use our car rental services.</i></p>
+</div>
+    
 
-    <h1>Privacy Policy for [Your Car Rental Business Name]</h1>
-    <p><strong>Effective Date:</strong> [Insert Date]</p>
-
-    <p>At [Your Car Rental Business Name] (referred to as "we," "our," or "us"), we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you use our car rental services.</p>
 
     <div class="section">
-        <h2>1. Information We Collect</h2>
+        <h4>1. Information We Collect</h4>
         <p>We may collect personal and non-personal information when you interact with us, including but not limited to:</p>
         <ul>
             <li><strong>Personal Information:</strong> Name, address, phone number, email address, driver’s license details, and payment information.</li>
@@ -56,7 +35,7 @@
     </div>
 
     <div class="section">
-        <h2>2. How We Use Your Information</h2>
+        <h4>2. How We Use Your Information</h4>
         <p>The information we collect is used to:</p>
         <ul>
             <li>Facilitate the booking and management of your car rental.</li>
@@ -70,7 +49,7 @@
     </div>
 
     <div class="section">
-        <h2>3. Sharing Your Information</h2>
+        <h4>3. Sharing Your Information</h4>
         <p>We do not sell or share your personal information for unrelated third-party marketing. However, we may share your information in the following scenarios:</p>
         <ul>
             <li><strong>Service Providers:</strong> With third-party vendors for payment processing, insurance, or roadside assistance.</li>
@@ -81,17 +60,17 @@
     </div>
 
     <div class="section">
-        <h2>4. Data Security</h2>
+        <h4>4. Data Security</h4>
         <p>We implement appropriate technical and organizational measures to protect your personal information from unauthorized access, use, or disclosure. However, no system is completely secure, and we cannot guarantee absolute security.</p>
     </div>
 
     <div class="section">
-        <h2>5. Retention of Information</h2>
+        <h4>5. Retention of Information</h4>
         <p>We retain your information only as long as necessary to fulfill the purposes outlined in this Privacy Policy or to comply with legal and regulatory requirements.</p>
     </div>
 
     <div class="section">
-        <h2>6. Your Rights</h2>
+        <h4>6. Your Rights</h4>
         <p>Depending on your jurisdiction, you may have the following rights regarding your personal information:</p>
         <ul>
             <li>Access, update, or delete your data.</li>
@@ -102,17 +81,17 @@
     </div>
 
     <div class="section">
-        <h2>7. Cookies and Tracking Technologies</h2>
+        <h4>7. Cookies and Tracking Technologies</h4>
         <p>Our website or mobile application may use cookies and similar technologies to enhance your experience. You can control or disable cookies through your browser settings.</p>
     </div>
 
     <div class="section">
-        <h2>8. Changes to This Privacy Policy</h2>
+        <h4>8. Changes to This Privacy Policy</h4>
         <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with a revised "Effective Date."</p>
     </div>
 
     <div class="section contact-info">
-        <h2>9. Contact Us</h2>
+        <h4>9. Contact Us</h4>
         <p>If you have any questions about this Privacy Policy or our data practices, please contact us at:</p>
         <p>Email: <a href="mailto:[Insert Email Address]">maricalmotors@test.com</a></p>
         <p>Phone: 09324562468</p>
