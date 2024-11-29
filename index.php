@@ -38,8 +38,5 @@ require_once(ROOT_DIR."includes/header.php");
   </div>
 </div>
 
-
-
-
 <!-- Footer -->
 <?php require_once(ROOT_DIR."includes/footer.php"); ?>

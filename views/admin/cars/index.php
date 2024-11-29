@@ -14,11 +14,7 @@
     }
 
     include(ROOT_DIR."app/caroptions/get_cars.php");
-
-
 ?>
-    
-
     <!-- Navbar -->
     <?php require_once(ROOT_DIR."includes/navbar.php"); ?>
 
