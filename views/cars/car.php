@@ -6,12 +6,10 @@ include(ROOT_DIR."app/config/DatabaseConnect.php");
 $db = new DatabaseConnect();
 $conn = $db ->connectDB();
 
-$cars = [];
-$id = @$_GET['id'];
-$category = [ "4" => "Ford Mustang", "6" =>"Chevrolet Malibu", "7" => "Tesla Modle 3", "8" => "Jeep Wrangler"];
+
 
 try {
-    $sql = "SELECT * FROM cars WHERE cars.id = $id";
+    $sql = "SELECT * FROM `cars` ORDER BY `cars`.`id`";
     $stmt = $conn ->prepare($sql);
     $stmt -> execute();
     $cars = $stmt -> fetch(); 
@@ -64,27 +62,15 @@ if(isset($_SESSION["success"])){
 
                 <!-- car Information -->
                 <div class="col-md-6">
-                    <form action="<?php echo BASE_URL;?>app/cart/add_to_cart.php" method="POST">
+                    <form action="<?php echo BASE_URL;?>app/car/rentacar.php" method="POST">
                         <input type="hidden" name="id" value="<?php echo $cars["id"]; ?>">
                         <h2><?php echo $cars["car_name"]; ?></h2>
-                        <div class="mb-3"><span class="badge text-bg-info"><?php echo $category[$cars["category_id"]]; ?></span></div>
-                        <p class="lead text-dark fw-bold">Php <?php echo number_format($cars["unit_price"],2) ?></p>
+                        <p class="lead text-dark fw-bold">Php <?php echo number_format($cars["rental_price"],2) ?></p>
                         <p><?php echo $cars["car_description"];?></p>
-
-                        <!-- Quantity Selection -->
-                        <div class="mb-3">
-                            <label for="quantity" class="form-label">Quantity</label>
-                            <div class="input-group">
-                                <button class="btn btn-outline-secondary" type="button" id="decrement-btn">-</button>
-                                <input type="number" id="quantity" name="quantity" class="form-control text-center" value="1" min="1" max="10" style="max-width: 60px;">
-                                <button class="btn btn-outline-secondary" type="button" id="increment-btn">+</button>
-                                <span class="input-group-text">/ Remaining Stocks: <?php echo $cars["stocks"] ?></span>
-                            </div>
-                        </div>
 
                         <!-- Add to Cart Button -->
                         <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary btn-lg" <?php echo ($cars ["stocks"] <= 0 ? "disabled" : "");?>><?php echo ($product["stocks"] <= 0 ? "Soldout" : "Add to cart"); ?></button>
+                        <button href="#" class="btn btn-dark" <?php echo ($cars ["availability"] <= 0 ? "disabled" : "");?>><?php echo ($cars["availability"] <= 0 ? "Soldout" : "Rent Now"); ?></button>
                         </div>
                     
                 </div>
@@ -109,14 +95,7 @@ if(isset($_SESSION["success"])){
     });
 </script>
 
-<!-- Footer -->
-<footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2024 MyShop. All rights reserved.</p>
-    <nav>
-        <a href="#" class="text-white">Privacy Policy</a> | 
-        <a href="#" class="text-white">Terms & Conditions</a>
-    </nav>
-</footer>
+
 
    
 <!-- Bootstrap 5 JS Bundle -->

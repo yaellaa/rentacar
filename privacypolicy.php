@@ -94,8 +94,8 @@ require_once(ROOT_DIR."includes/navbar.php");?>
         <h4>9. Contact Us</h4>
         <p>If you have any questions about this Privacy Policy or our data practices, please contact us at:</p>
         <p>Email: <a href="mailto:[Insert Email Address]">maricalmotors@test.com</a></p>
-        <p>Phone: 09324562468</p>
-        <p>Address: ewan 1</p>
+        <p>Phone: 09129310727</p>
+        <p>Address: Bacoor City</p>
     </div>
 
     <p>Thank you for trusting Marcial Motors. Your privacy is our priority!</p>

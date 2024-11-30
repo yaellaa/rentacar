@@ -111,25 +111,25 @@ require_once(ROOT_DIR."includes/navbar.php");?>
 
     <div class="section">
         <h4>11. Force Majeure</h4>
-        <p>We are not responsible for delays, cancellations, or inability to provide services due to circumstances beyond our control, including but not limited to natural disasters, strikes, or government actions.</p>
+        <p> We are not responsible for delays, cancellations, or inability to provide services due to circumstances beyond our control, including but not limited to natural disasters, strikes, or government actions.</p>
     </div>
 
     <div class="section">
         <h4>12. Governing Law</h4>
-        <p>These Terms are governed by the laws of wow ewan. Any disputes shall be resolved in the courts of wowie.</p>
+        <p> These Terms are governed by the laws of (--------). Any disputes shall be resolved in the courts of (--------).</p>
     </div>
 
     <div class="section">
         <h4>13. Amendments</h4>
-        <p>We may update these Terms from time to time. Changes will be posted on our website or communicated to you directly.</p>
+        <p> We may update these Terms from time to time. Changes will be posted on our website or communicated to you directly.</p>
     </div>
 
     <div class="section contact-info">
         <h4>14. Contact Information</h4>
         <p>For questions or concerns about these Terms, contact us at:</p>
         <p>Email: <a href="mailto:[Insert Email Address]">marcialmotors@test.com</a></p>
-        <p>Phone: 09923145649</p>
-        <p>Address: ewan q</p>
+        <p>Phone: 09129310727</p>
+        <p>Address: Bacoor City</p>
     </div>
 
     <p>By renting a vehicle from [Your Car Rental Business Name], you acknowledge that you have read, understood, and agreed to these Terms and Conditions. Safe travels!</p>
